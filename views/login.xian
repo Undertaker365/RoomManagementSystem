@@ -1,12 +1,27 @@
-{{> head}}
-<body class="bg-gray-50">
-  <div class="flex justify-center mt-10">
-    <form class="flex flex-col w-96 p-6 border rounded-lg shadow" method="POST" action="/login">
-      <h2 class="text-xl font-bold mb-4 text-center">Login</h2>
-      <input type="email" name="email" placeholder="Email" class="mb-2 p-2 border rounded" required />
-      <input type="password" name="password" placeholder="Password" class="mb-2 p-2 border rounded" required />
-      <button type="submit" class="bg-blue-500 text-white p-2 rounded">Login</button>
-      <a href="/register" class="text-blue-700 mt-2 text-center">Don't have an account? Register</a>
-    </form>
+{{#> layout activePage="login"}}
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg rounded-lg card w-full max-w-md">
+      <h3 class="text-2xl font-bold text-center text-dark-green">Login to MinSU RMS</h3>
+      <p class="text-center text-gray-600 mt-2">Enter your credentials to access your account.</p>
+      <form action="/login" method="POST" class="mt-6">
+        <div class="mt-4">
+          <label class="block" for="email">Email</label>
+          <input type="email" name="email" placeholder="Email"
+            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-gold" required>
+        </div>
+        <div class="mt-4">
+          <label class="block">Password</label>
+          <input type="password" name="password" placeholder="Password"
+            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-gold" required>
+        </div>
+        <div class="flex items-baseline justify-between mt-4">
+          <button type="submit" class="btn-primary px-6 py-2 text-white">Login</button>
+          <a href="/forgot-password" class="text-sm text-sky-blue hover:underline">Forgot password?</a>
+        </div>
+        <div class="mt-6 text-center">
+          <p class="text-gray-600">Don't have an account? <a href="/register" class="text-sky-blue hover:underline">Register here</a></p>
+        </div>
+      </form>
+    </div>
   </div>
-{{> footer }}
+{{/layout}}

@@ -1,0 +1,65 @@
+{{#> layout activePage="rooms"}}
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-dark-green mb-8">Rooms</h1>
+
+    <div class="flex justify-between items-center mb-6">
+      <div class="flex items-center space-x-4">
+        <label for="building-filter" class="text-gray-700">Filter by Building:</label>
+        <select id="building-filter" class="border rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-gold">
+          <option value="">All Buildings</option>
+          <option value="building-a">Building A (College of Education)</option>
+          <option value="building-b">Building B (College of Education)</option>
+          <option value="building-c">Building C (College of Agriculture)</option>
+        </select>
+      </div>
+      <a href="/rooms/add" class="btn-primary px-6 py-3 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+        Add Room
+      </a>
+    </div>
+
+    <!-- Rooms Table -->
+    <div class="card p-6 overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Room Name</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Capacity</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Building</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Availability</th>
+            <th scope="col" class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Example Room Row (Available) -->
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Room 101</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">30</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Building A</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm">
+              <span class="badge-available px-2 inline-flex text-xs leading-5 font-semibold rounded-full">Available</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <a href="/rooms/edit/1" class="text-sky-blue hover:text-blue-700 mr-3">Edit</a>
+              <a href="/rooms/delete/1" class="text-red-500 hover:text-red-700">Delete</a>
+            </td>
+          </tr>
+          <!-- Example Room Row (Occupied) -->
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Room 102</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">25</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Building A</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm">
+              <span class="badge-occupied px-2 inline-flex text-xs leading-5 font-semibold rounded-full">Occupied</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <a href="/rooms/edit/2" class="text-sky-blue hover:text-blue-700 mr-3">Edit</a>
+              <a href="/rooms/delete/2" class="text-red-500 hover:text-red-700">Delete</a>
+            </td>
+          </tr>
+          <!-- More room rows can be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+{{/layout}}

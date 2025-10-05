@@ -1,0 +1,81 @@
+{{#> layout activePage="buildings"}}
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-dark-green mb-8">Buildings</h1>
+
+    <div class="flex justify-end mb-6">
+      <a href="/buildings/add" class="btn-primary px-6 py-3 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+        Add Building
+      </a>
+    </div>
+
+    <!-- Buildings Grouped by College (Accordion/Tabs) -->
+    <div class="space-y-6">
+      <!-- Example College Group -->
+      <div class="card p-6">
+        <h2 class="text-2xl font-bold text-dark-green mb-4">College of Education</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Example Building Card -->
+          <div class="card p-6 relative group">
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Building A</h3>
+            <div class="inline-block bg-light-green text-white text-xs px-3 py-1 rounded-full mb-4">College of Education</div>
+            <div class="flex items-center text-gray-500 text-sm mb-4">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 110-6 3 3 0 010 6z"></path></svg>
+              <span>10 Rooms</span>
+            </div>
+            <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <button class="text-sky-blue hover:text-blue-700">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.38-2.828-2.828z"></path></svg>
+              </button>
+              <button class="text-red-500 hover:text-red-700">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+              </button>
+            </div>
+          </div>
+          <!-- End Example Building Card -->
+          <div class="card p-6 relative group">
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Building B</h3>
+            <div class="inline-block bg-light-green text-white text-xs px-3 py-1 rounded-full mb-4">College of Education</div>
+            <div class="flex items-center text-gray-500 text-sm mb-4">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 110-6 3 3 0 010 6z"></path></svg>
+              <span>8 Rooms</span>
+            </div>
+            <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <button class="text-sky-blue hover:text-blue-700">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.38-2.828-2.828z"></path></svg>
+              </button>
+              <button class="text-red-500 hover:text-red-700">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Example College Group -->
+
+      <!-- Another Example College Group -->
+      <div class="card p-6">
+        <h2 class="text-2xl font-bold text-dark-green mb-4">College of Agriculture</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card p-6 relative group">
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Building C</h3>
+            <div class="inline-block bg-light-green text-white text-xs px-3 py-1 rounded-full mb-4">College of Agriculture</div>
+            <div class="flex items-center text-gray-500 text-sm mb-4">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 110-6 3 3 0 010 6z"></path></svg>
+              <span>6 Rooms</span>
+            </div>
+            <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <button class="text-sky-blue hover:text-blue-700">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.38-2.828-2.828z"></path></svg>
+              </button>
+              <button class="text-red-500 hover:text-red-700">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Another Example College Group -->
+    </div>
+  </div>
+{{/layout}}
